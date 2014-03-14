@@ -1,0 +1,2232 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml bitfile_fpga.twx bitfile_fpga.ncd -o bitfile_fpga.twr
+bitfile_fpga.pcf -ucf xem6310.ucf
+
+Design file:              bitfile_fpga.ncd
+Physical constraint file: bitfile_fpga.pcf
+Device,package,speed:     xc6slx45,fgg484,C,-3 (PRODUCTION 1.21 2012-04-23)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+WARNING:Timing:3224 - The clock okUH<0> associated with TIMEGRP 
+   "okHostINOUT_grp" OFFSET = OUT 8 ns AFTER COMP "okUH<0>" "RISING"; does not 
+   clock any registered output components.
+WARNING:Timing:3225 - Timing constraint TIMEGRP "okHostINOUT_grp" OFFSET = OUT 
+   8 ns AFTER COMP "okUH<0>" "RISING"; ignored during timing analysis
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_okHostClk = PERIOD TIMEGRP "okHostClk" 9.96 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   5.340ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_okHostClk = PERIOD TIMEGRP "okHostClk" 9.96 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 4.620ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 9.960ns
+  Low pulse: 4.980ns
+  Low pulse limit: 2.670ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: okHI/dcm0/CLKIN
+  Logical resource: okHI/dcm0/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: okHI/dcm0_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 4.620ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 9.960ns
+  High pulse: 4.980ns
+  High pulse limit: 2.670ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: okHI/dcm0/CLKIN
+  Logical resource: okHI/dcm0/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: okHI/dcm0_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 6.390ns (period - min period limit)
+  Period: 9.960ns
+  Min period limit: 3.570ns (280.112MHz) (Tdcmper_CLKIN)
+  Physical resource: okHI/dcm0/CLKIN
+  Logical resource: okHI/dcm0/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: okHI/dcm0_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_okSysClk = PERIOD TIMEGRP "okSysClk" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_okSysClk = PERIOD TIMEGRP "okSysClk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.675ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT0
+  Logical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT0
+  Location pin: PLL_ADV_X0Y1.CLKOUT0
+  Clock network: memc3_infrastructure_inst/clk_2x_0
+--------------------------------------------------------------------------------
+Slack: 0.675ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT1
+  Logical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT1
+  Location pin: PLL_ADV_X0Y1.CLKOUT1
+  Clock network: memc3_infrastructure_inst/clk_2x_180
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: memc3_infrastructure_inst/u_pll_adv/CLKIN1
+  Logical resource: memc3_infrastructure_inst/u_pll_adv/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN2
+  Clock network: memc3_infrastructure_inst/u_pll_adv_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_SYS_CLK3 = PERIOD TIMEGRP "SYS_CLK3" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.334ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_SYS_CLK3 = PERIOD TIMEGRP "SYS_CLK3" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.675ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT0
+  Logical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT0
+  Location pin: PLL_ADV_X0Y1.CLKOUT0
+  Clock network: memc3_infrastructure_inst/clk_2x_0
+--------------------------------------------------------------------------------
+Slack: 0.675ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 0.925ns (1081.081MHz) (Tpllper_CLKOUT(Foutmax))
+  Physical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT1
+  Logical resource: memc3_infrastructure_inst/u_pll_adv/CLKOUT1
+  Location pin: PLL_ADV_X0Y1.CLKOUT1
+  Clock network: memc3_infrastructure_inst/clk_2x_180
+--------------------------------------------------------------------------------
+Slack: 6.666ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.667ns (Tdcmpw_CLKIN_100_150)
+  Physical resource: memc3_infrastructure_inst/u_pll_adv/CLKIN1
+  Logical resource: memc3_infrastructure_inst/u_pll_adv/CLKIN1
+  Location pin: PLL_ADV_X0Y1.CLKIN2
+  Clock network: memc3_infrastructure_inst/u_pll_adv_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_OK_CLK = PERIOD TIMEGRP "OK_CLK" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.124ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_OK_CLK = PERIOD TIMEGRP "OK_CLK" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okHI/core0/core0/r0/CLKA
+  Logical resource: okHI/core0/core0/r0/CLKA
+  Location pin: RAMB16_X2Y4.CLKA
+  Clock network: okClk
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: okHI/core0/core0/r0/CLKB
+  Logical resource: okHI/core0/core0/r0/CLKB
+  Location pin: RAMB16_X2Y4.CLKB
+  Clock network: okClk
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom/CLKA
+  Logical resource: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom/CLKA
+  Location pin: RAMB16_X0Y16.CLKA
+  Clock network: okClk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_okHI_dcm0_clk0 = PERIOD TIMEGRP "okHI_dcm0_clk0" 
+TS_okHostClk PHASE         -0.93375 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 30057 paths analyzed, 5252 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.822ns.
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin3b (SLICE_X24Y1.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.109ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/regctrlin3a (FF)
+  Destination:          okHI/regctrlin3b (FF)
+  Requirement:          4.980ns
+  Data Path Delay:      3.252ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.484ns (0.513 - 0.997)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk falling at 4.047ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/regctrlin3a to okHI/regctrlin3b
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    ILOGIC_X26Y2.Q4      Tickq                 0.992   okHI/okUHx<3>
+                                                       okHI/regctrlin3a
+    SLICE_X24Y1.DX       net (fanout=1)        2.124   okHI/okUHx<3>
+    SLICE_X24Y1.CLK      Tdick                 0.136   okHI/okHC<4>
+                                                       okHI/regctrlin3b
+    -------------------------------------------------  ---------------------------
+    Total                                      3.252ns (1.128ns logic, 2.124ns route)
+                                                       (34.7% logic, 65.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/core0/core0/a0/atmel_status_fuses_9 (SLICE_X27Y39.CE), 65 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.138ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          okHI/core0/core0/a0/atmel_status_fuses_9 (FF)
+  Requirement:          9.960ns
+  Data Path Delay:      8.663ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.024ns (0.233 - 0.257)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                                       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X6Y31.C2       net (fanout=7)        1.666   okHI/core0/core0/a0/pico_instr<5>
+    SLICE_X6Y31.CMUX     Tilo                  0.261   okHI/core0/core0/a0/pc0/KCPSM6_REG1
+                                                       okHI/core0/core0/a0/pc0/upper_reg_banks_RAMC
+    SLICE_X6Y30.A1       net (fanout=2)        0.671   okHI/core0/core0/a0/pc0/sy<6>
+    SLICE_X6Y30.AMUX     Tilo                  0.261   okHI/core0/core0/a0/pc0/KCPSM6_PORT_ID
+                                                       okHI/core0/core0/a0/pc0/data_path_loop[6].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X9Y29.A4       net (fanout=10)       0.769   okHI/core0/core0/a0/pico_port_id<6>
+    SLICE_X9Y29.A        Tilo                  0.259   okHI/core0/core0/a0/pico_in_port_5
+                                                       okHI/core0/core0/a0/_n0185_inv11
+    SLICE_X16Y34.C2      net (fanout=6)        1.065   okHI/core0/core0/a0/_n0185_inv1
+    SLICE_X16Y34.CMUX    Tilo                  0.251   okHI/core0/core0/a0/atmel_status_fuses<19>
+                                                       okHI/core0/core0/a0/_n0206_inv1
+    SLICE_X27Y39.CE      net (fanout=3)        1.247   okHI/core0/core0/a0/_n0206_inv
+    SLICE_X27Y39.CLK     Tceck                 0.363   okHI/core0/core0/a0/atmel_status_fuses<17>
+                                                       okHI/core0/core0/a0/atmel_status_fuses_9
+    -------------------------------------------------  ---------------------------
+    Total                                      8.663ns (3.245ns logic, 5.418ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.320ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          okHI/core0/core0/a0/atmel_status_fuses_9 (FF)
+  Requirement:          9.960ns
+  Data Path Delay:      8.481ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.024ns (0.233 - 0.257)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                                       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X6Y32.A2       net (fanout=7)        1.678   okHI/core0/core0/a0/pico_instr<5>
+    SLICE_X6Y32.A        Tilo                  0.203   okHI/core0/core0/a0/pc0/KCPSM6_REG0
+                                                       okHI/core0/core0/a0/pc0/lower_reg_banks_RAMA_D1
+    SLICE_X6Y30.D4       net (fanout=2)        0.836   okHI/core0/core0/a0/pc0/sy<1>
+    SLICE_X6Y30.D        Tilo                  0.203   okHI/core0/core0/a0/pc0/KCPSM6_PORT_ID
+                                                       okHI/core0/core0/a0/pc0/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
+    SLICE_X16Y34.C1      net (fanout=23)       1.850   okHI/core0/core0/a0/pico_port_id<1>
+    SLICE_X16Y34.CMUX    Tilo                  0.251   okHI/core0/core0/a0/atmel_status_fuses<19>
+                                                       okHI/core0/core0/a0/_n0206_inv1
+    SLICE_X27Y39.CE      net (fanout=3)        1.247   okHI/core0/core0/a0/_n0206_inv
+    SLICE_X27Y39.CLK     Tceck                 0.363   okHI/core0/core0/a0/atmel_status_fuses<17>
+                                                       okHI/core0/core0/a0/atmel_status_fuses_9
+    -------------------------------------------------  ---------------------------
+    Total                                      8.481ns (2.870ns logic, 5.611ns route)
+                                                       (33.8% logic, 66.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.426ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          okHI/core0/core0/a0/atmel_status_fuses_9 (FF)
+  Requirement:          9.960ns
+  Data Path Delay:      8.375ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.024ns (0.233 - 0.257)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                                       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X6Y31.C2       net (fanout=7)        1.666   okHI/core0/core0/a0/pico_instr<5>
+    SLICE_X6Y31.C        Tilo                  0.204   okHI/core0/core0/a0/pc0/KCPSM6_REG1
+                                                       okHI/core0/core0/a0/pc0/upper_reg_banks_RAMC_D1
+    SLICE_X6Y30.A3       net (fanout=2)        0.696   okHI/core0/core0/a0/pc0/sy<7>
+    SLICE_X6Y30.A        Tilo                  0.203   okHI/core0/core0/a0/pc0/KCPSM6_PORT_ID
+                                                       okHI/core0/core0/a0/pc0/data_path_loop[6].output_data.sy_kk_mux_lut/LUT6
+    SLICE_X9Y29.A6       net (fanout=2)        0.571   okHI/core0/core0/a0/pico_port_id<7>
+    SLICE_X9Y29.A        Tilo                  0.259   okHI/core0/core0/a0/pico_in_port_5
+                                                       okHI/core0/core0/a0/_n0185_inv11
+    SLICE_X16Y34.C2      net (fanout=6)        1.065   okHI/core0/core0/a0/_n0185_inv1
+    SLICE_X16Y34.CMUX    Tilo                  0.251   okHI/core0/core0/a0/atmel_status_fuses<19>
+                                                       okHI/core0/core0/a0/_n0206_inv1
+    SLICE_X27Y39.CE      net (fanout=3)        1.247   okHI/core0/core0/a0/_n0206_inv
+    SLICE_X27Y39.CLK     Tceck                 0.363   okHI/core0/core0/a0/atmel_status_fuses<17>
+                                                       okHI/core0/core0/a0/atmel_status_fuses_9
+    -------------------------------------------------  ---------------------------
+    Total                                      8.375ns (3.130ns logic, 5.245ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/core0/core0/a0/atmel_status_fuses_7 (SLICE_X27Y39.CE), 65 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          okHI/core0/core0/a0/atmel_status_fuses_7 (FF)
+  Requirement:          9.960ns
+  Data Path Delay:      8.662ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.024ns (0.233 - 0.257)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                                       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X6Y31.C2       net (fanout=7)        1.666   okHI/core0/core0/a0/pico_instr<5>
+    SLICE_X6Y31.CMUX     Tilo                  0.261   okHI/core0/core0/a0/pc0/KCPSM6_REG1
+                                                       okHI/core0/core0/a0/pc0/upper_reg_banks_RAMC
+    SLICE_X6Y30.A1       net (fanout=2)        0.671   okHI/core0/core0/a0/pc0/sy<6>
+    SLICE_X6Y30.AMUX     Tilo                  0.261   okHI/core0/core0/a0/pc0/KCPSM6_PORT_ID
+                                                       okHI/core0/core0/a0/pc0/data_path_loop[6].output_data.sy_kk_mux_lut/LUT5
+    SLICE_X9Y29.A4       net (fanout=10)       0.769   okHI/core0/core0/a0/pico_port_id<6>
+    SLICE_X9Y29.A        Tilo                  0.259   okHI/core0/core0/a0/pico_in_port_5
+                                                       okHI/core0/core0/a0/_n0185_inv11
+    SLICE_X16Y34.C2      net (fanout=6)        1.065   okHI/core0/core0/a0/_n0185_inv1
+    SLICE_X16Y34.CMUX    Tilo                  0.251   okHI/core0/core0/a0/atmel_status_fuses<19>
+                                                       okHI/core0/core0/a0/_n0206_inv1
+    SLICE_X27Y39.CE      net (fanout=3)        1.247   okHI/core0/core0/a0/_n0206_inv
+    SLICE_X27Y39.CLK     Tceck                 0.362   okHI/core0/core0/a0/atmel_status_fuses<17>
+                                                       okHI/core0/core0/a0/atmel_status_fuses_7
+    -------------------------------------------------  ---------------------------
+    Total                                      8.662ns (3.244ns logic, 5.418ns route)
+                                                       (37.5% logic, 62.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.321ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          okHI/core0/core0/a0/atmel_status_fuses_7 (FF)
+  Requirement:          9.960ns
+  Data Path Delay:      8.480ns (Levels of Logic = 3)
+  Clock Path Skew:      -0.024ns (0.233 - 0.257)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                                       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X6Y32.A2       net (fanout=7)        1.678   okHI/core0/core0/a0/pico_instr<5>
+    SLICE_X6Y32.A        Tilo                  0.203   okHI/core0/core0/a0/pc0/KCPSM6_REG0
+                                                       okHI/core0/core0/a0/pc0/lower_reg_banks_RAMA_D1
+    SLICE_X6Y30.D4       net (fanout=2)        0.836   okHI/core0/core0/a0/pc0/sy<1>
+    SLICE_X6Y30.D        Tilo                  0.203   okHI/core0/core0/a0/pc0/KCPSM6_PORT_ID
+                                                       okHI/core0/core0/a0/pc0/data_path_loop[0].output_data.sy_kk_mux_lut/LUT6
+    SLICE_X16Y34.C1      net (fanout=23)       1.850   okHI/core0/core0/a0/pico_port_id<1>
+    SLICE_X16Y34.CMUX    Tilo                  0.251   okHI/core0/core0/a0/atmel_status_fuses<19>
+                                                       okHI/core0/core0/a0/_n0206_inv1
+    SLICE_X27Y39.CE      net (fanout=3)        1.247   okHI/core0/core0/a0/_n0206_inv
+    SLICE_X27Y39.CLK     Tceck                 0.362   okHI/core0/core0/a0/atmel_status_fuses<17>
+                                                       okHI/core0/core0/a0/atmel_status_fuses_7
+    -------------------------------------------------  ---------------------------
+    Total                                      8.480ns (2.869ns logic, 5.611ns route)
+                                                       (33.8% logic, 66.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     1.427ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:          okHI/core0/core0/a0/atmel_status_fuses_7 (FF)
+  Requirement:          9.960ns
+  Data Path Delay:      8.374ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.024ns (0.233 - 0.257)
+  Source Clock:         okClk rising at -0.933ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.135ns
+
+  Clock Uncertainty:          0.135ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y16.DOA5    Trcko_DOA             1.850   okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                                       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    SLICE_X6Y31.C2       net (fanout=7)        1.666   okHI/core0/core0/a0/pico_instr<5>
+    SLICE_X6Y31.C        Tilo                  0.204   okHI/core0/core0/a0/pc0/KCPSM6_REG1
+                                                       okHI/core0/core0/a0/pc0/upper_reg_banks_RAMC_D1
+    SLICE_X6Y30.A3       net (fanout=2)        0.696   okHI/core0/core0/a0/pc0/sy<7>
+    SLICE_X6Y30.A        Tilo                  0.203   okHI/core0/core0/a0/pc0/KCPSM6_PORT_ID
+                                                       okHI/core0/core0/a0/pc0/data_path_loop[6].output_data.sy_kk_mux_lut/LUT6
+    SLICE_X9Y29.A6       net (fanout=2)        0.571   okHI/core0/core0/a0/pico_port_id<7>
+    SLICE_X9Y29.A        Tilo                  0.259   okHI/core0/core0/a0/pico_in_port_5
+                                                       okHI/core0/core0/a0/_n0185_inv11
+    SLICE_X16Y34.C2      net (fanout=6)        1.065   okHI/core0/core0/a0/_n0185_inv1
+    SLICE_X16Y34.CMUX    Tilo                  0.251   okHI/core0/core0/a0/atmel_status_fuses<19>
+                                                       okHI/core0/core0/a0/_n0206_inv1
+    SLICE_X27Y39.CE      net (fanout=3)        1.247   okHI/core0/core0/a0/_n0206_inv
+    SLICE_X27Y39.CLK     Tceck                 0.362   okHI/core0/core0/a0/atmel_status_fuses<17>
+                                                       okHI/core0/core0/a0/atmel_status_fuses_7
+    -------------------------------------------------  ---------------------------
+    Total                                      8.374ns (3.129ns logic, 5.245ns route)
+                                                       (37.4% logic, 62.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_okHI_dcm0_clk0 = PERIOD TIMEGRP "okHI_dcm0_clk0" TS_okHostClk PHASE
+        -0.93375 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/core0/core0/a0/pc0/stack_ram_low_RAMA (SLICE_X2Y32.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.304ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop (FF)
+  Destination:          okHI/core0/core0/a0/pc0/stack_ram_low_RAMA (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.310ns (Levels of Logic = 0)
+  Clock Path Skew:      0.006ns (0.217 - 0.211)
+  Source Clock:         okClk rising at 9.027ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop to okHI/core0/core0/a0/pc0/stack_ram_low_RAMA
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y31.CQ       Tcko                  0.200   okHI/core0/core0/a0/pc0/KCPSM6_STACK0
+                                                       okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop
+    SLICE_X2Y32.D3       net (fanout=9)        0.282   okHI/core0/core0/a0/pc0/stack_pointer<2>
+    SLICE_X2Y32.CLK      Tah         (-Th)     0.172   okHI/core0/core0/a0/pc0/KCPSM6_STACK_RAM0
+                                                       okHI/core0/core0/a0/pc0/stack_ram_low_RAMA
+    -------------------------------------------------  ---------------------------
+    Total                                      0.310ns (0.028ns logic, 0.282ns route)
+                                                       (9.0% logic, 91.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/core0/core0/a0/pc0/stack_ram_low_RAMA_D1 (SLICE_X2Y32.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.304ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop (FF)
+  Destination:          okHI/core0/core0/a0/pc0/stack_ram_low_RAMA_D1 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.310ns (Levels of Logic = 0)
+  Clock Path Skew:      0.006ns (0.217 - 0.211)
+  Source Clock:         okClk rising at 9.027ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop to okHI/core0/core0/a0/pc0/stack_ram_low_RAMA_D1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y31.CQ       Tcko                  0.200   okHI/core0/core0/a0/pc0/KCPSM6_STACK0
+                                                       okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop
+    SLICE_X2Y32.D3       net (fanout=9)        0.282   okHI/core0/core0/a0/pc0/stack_pointer<2>
+    SLICE_X2Y32.CLK      Tah         (-Th)     0.172   okHI/core0/core0/a0/pc0/KCPSM6_STACK_RAM0
+                                                       okHI/core0/core0/a0/pc0/stack_ram_low_RAMA_D1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.310ns (0.028ns logic, 0.282ns route)
+                                                       (9.0% logic, 91.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/core0/core0/a0/pc0/stack_ram_low_RAMB (SLICE_X2Y32.D3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.304ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop (FF)
+  Destination:          okHI/core0/core0/a0/pc0/stack_ram_low_RAMB (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.310ns (Levels of Logic = 0)
+  Clock Path Skew:      0.006ns (0.217 - 0.211)
+  Source Clock:         okClk rising at 9.027ns
+  Destination Clock:    okClk rising at 9.027ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop to okHI/core0/core0/a0/pc0/stack_ram_low_RAMB
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y31.CQ       Tcko                  0.200   okHI/core0/core0/a0/pc0/KCPSM6_STACK0
+                                                       okHI/core0/core0/a0/pc0/stack_loop[2].upper_stack.pointer_flop
+    SLICE_X2Y32.D3       net (fanout=9)        0.282   okHI/core0/core0/a0/pc0/stack_pointer<2>
+    SLICE_X2Y32.CLK      Tah         (-Th)     0.172   okHI/core0/core0/a0/pc0/KCPSM6_STACK_RAM0
+                                                       okHI/core0/core0/a0/pc0/stack_ram_low_RAMB
+    -------------------------------------------------  ---------------------------
+    Total                                      0.310ns (0.028ns logic, 0.282ns route)
+                                                       (9.0% logic, 91.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_okHI_dcm0_clk0 = PERIOD TIMEGRP "okHI_dcm0_clk0" TS_okHostClk PHASE
+        -0.93375 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.836ns (period - min period limit)
+  Period: 9.960ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okHI/core0/core0/r0/CLKA
+  Logical resource: okHI/core0/core0/r0/CLKA
+  Location pin: RAMB16_X2Y4.CLKA
+  Clock network: okClk
+--------------------------------------------------------------------------------
+Slack: 6.836ns (period - min period limit)
+  Period: 9.960ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: okHI/core0/core0/r0/CLKB
+  Logical resource: okHI/core0/core0/r0/CLKB
+  Location pin: RAMB16_X2Y4.CLKB
+  Clock network: okClk
+--------------------------------------------------------------------------------
+Slack: 6.836ns (period - min period limit)
+  Period: 9.960ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom/CLKA
+  Logical resource: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom/CLKA
+  Location pin: RAMB16_X0Y16.CLKA
+  Clock network: okClk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_mcb_drp_clk_bufg_in = PERIOD 
+TIMEGRP         "memc3_infrastructure_inst_mcb_drp_clk_bufg_in" TS_okSysClk / 
+0.78125         HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.730ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_mcb_drp_clk_bufg_in = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_mcb_drp_clk_bufg_in" TS_okSysClk / 0.78125
+        HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 11.070ns (period - min period limit)
+  Period: 12.800ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: memc3_infrastructure_inst/U_BUFG_CLK1/I0
+  Logical resource: memc3_infrastructure_inst/U_BUFG_CLK1/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: memc3_infrastructure_inst/mcb_drp_clk_bufg_in
+--------------------------------------------------------------------------------
+Slack: 11.800ns (period - min period limit)
+  Period: 12.800ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_SELFREFRESH_EXIT_DQS_CAL/CLK
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/Mshreg_SELFREFRESH_MCB_MODE_R2/CLK
+  Location pin: SLICE_X2Y66.CLK
+  Clock network: c3_mcb_drp_clk
+--------------------------------------------------------------------------------
+Slack: 11.800ns (period - min period limit)
+  Period: 12.800ns
+  Min period limit: 1.000ns (1000.000MHz) (Tmcbcper_UICLK)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/UICLK
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/UICLK
+  Location pin: MCB_X0Y1.UICLK
+  Clock network: c3_mcb_drp_clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_clk_2x_180 = PERIOD TIMEGRP     
+    "memc3_infrastructure_inst_clk_2x_180" TS_okSysClk / 6.25 PHASE 0.8 ns      
+   HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.499ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_clk_2x_180 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk_2x_180" TS_okSysClk / 6.25 PHASE 0.8 ns
+        HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.101ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 1.499ns (667.111MHz) (Tmcbcper_PLLCLK)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK1
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK1
+  Location pin: MCB_X0Y1.PLLCLK1
+  Clock network: c3_sysclk_2x_180
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_clk_2x_0 = PERIOD TIMEGRP       
+  "memc3_infrastructure_inst_clk_2x_0" TS_okSysClk / 6.25 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.499ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_clk_2x_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk_2x_0" TS_okSysClk / 6.25 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.101ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 1.499ns (667.111MHz) (Tmcbcper_PLLCLK)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK0
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK0
+  Location pin: MCB_X0Y1.PLLCLK0
+  Clock network: c3_sysclk_2x
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_clk0_bufg_in = PERIOD TIMEGRP   
+      "memc3_infrastructure_inst_clk0_bufg_in" TS_okSysClk / 1.5625 HIGH        
+ 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   3.124ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_clk0_bufg_in = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk0_bufg_in" TS_okSysClk / 1.5625 HIGH
+        50%;
+--------------------------------------------------------------------------------
+Slack: 3.276ns (period - min period limit)
+  Period: 6.400ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X1Y22.CLKA
+  Clock network: c3_clk0
+--------------------------------------------------------------------------------
+Slack: 3.276ns (period - min period limit)
+  Period: 6.400ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X1Y20.CLKA
+  Clock network: c3_clk0
+--------------------------------------------------------------------------------
+Slack: 3.276ns (period - min period limit)
+  Period: 6.400ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKB
+  Logical resource: okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKB
+  Location pin: RAMB16_X2Y30.CLKB
+  Clock network: c3_clk0
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0 = PERIOD 
+TIMEGRP         "memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0" TS_SYS_CLK3 / 
+        0.78125 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 14605 paths analyzed, 1285 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.056ns.
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13 (SLICE_X14Y83.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.372ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_infrastructure_inst/powerup_pll_locked_1 (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13 (FF)
+  Requirement:          6.400ns
+  Data Path Delay:      4.619ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.146ns (1.775 - 1.921)
+  Source Clock:         c3_clk0 rising at 6.400ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.263ns
+
+  Clock Uncertainty:          0.263ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.276ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: memc3_infrastructure_inst/powerup_pll_locked_1 to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y63.CQ       Tcko                  0.447   memc3_infrastructure_inst/powerup_pll_locked_2
+                                                       memc3_infrastructure_inst/powerup_pll_locked_1
+    SLICE_X2Y65.A1       net (fanout=1)        0.683   memc3_infrastructure_inst/powerup_pll_locked_1
+    SLICE_X2Y65.A        Tilo                  0.203   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst11
+    SLICE_X14Y83.SR      net (fanout=55)       3.058   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst
+    SLICE_X14Y83.CLK     Trck                  0.228   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER<15>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13
+    -------------------------------------------------  ---------------------------
+    Total                                      4.619ns (0.878ns logic, 3.741ns route)
+                                                       (19.0% logic, 81.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.534ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13 (FF)
+  Requirement:          12.800ns
+  Data Path Delay:      4.069ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.054ns (0.478 - 0.532)
+  Source Clock:         c3_mcb_drp_clk rising at 0.000ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.143ns
+
+  Clock Uncertainty:          0.143ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.276ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y65.AQ       Tcko                  0.447   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock
+    SLICE_X2Y65.A6       net (fanout=4)        0.133   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock
+    SLICE_X2Y65.A        Tilo                  0.203   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst11
+    SLICE_X14Y83.SR      net (fanout=55)       3.058   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst
+    SLICE_X14Y83.CLK     Trck                  0.228   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER<15>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_13
+    -------------------------------------------------  ---------------------------
+    Total                                      4.069ns (0.878ns logic, 3.191ns route)
+                                                       (21.6% logic, 78.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15 (SLICE_X14Y83.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.375ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_infrastructure_inst/powerup_pll_locked_1 (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15 (FF)
+  Requirement:          6.400ns
+  Data Path Delay:      4.616ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.146ns (1.775 - 1.921)
+  Source Clock:         c3_clk0 rising at 6.400ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.263ns
+
+  Clock Uncertainty:          0.263ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.276ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: memc3_infrastructure_inst/powerup_pll_locked_1 to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y63.CQ       Tcko                  0.447   memc3_infrastructure_inst/powerup_pll_locked_2
+                                                       memc3_infrastructure_inst/powerup_pll_locked_1
+    SLICE_X2Y65.A1       net (fanout=1)        0.683   memc3_infrastructure_inst/powerup_pll_locked_1
+    SLICE_X2Y65.A        Tilo                  0.203   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst11
+    SLICE_X14Y83.SR      net (fanout=55)       3.058   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst
+    SLICE_X14Y83.CLK     Trck                  0.225   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER<15>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.616ns (0.875ns logic, 3.741ns route)
+                                                       (19.0% logic, 81.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.537ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15 (FF)
+  Requirement:          12.800ns
+  Data Path Delay:      4.066ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.054ns (0.478 - 0.532)
+  Source Clock:         c3_mcb_drp_clk rising at 0.000ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.143ns
+
+  Clock Uncertainty:          0.143ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.276ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y65.AQ       Tcko                  0.447   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock
+    SLICE_X2Y65.A6       net (fanout=4)        0.133   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock
+    SLICE_X2Y65.A        Tilo                  0.203   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst11
+    SLICE_X14Y83.SR      net (fanout=55)       3.058   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst
+    SLICE_X14Y83.CLK     Trck                  0.225   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER<15>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_15
+    -------------------------------------------------  ---------------------------
+    Total                                      4.066ns (0.875ns logic, 3.191ns route)
+                                                       (21.5% logic, 78.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14 (SLICE_X14Y83.SR), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     1.383ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_infrastructure_inst/powerup_pll_locked_1 (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14 (FF)
+  Requirement:          6.400ns
+  Data Path Delay:      4.608ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.146ns (1.775 - 1.921)
+  Source Clock:         c3_clk0 rising at 6.400ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.263ns
+
+  Clock Uncertainty:          0.263ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.276ns
+    Phase Error (PE):           0.120ns
+
+  Maximum Data Path at Slow Process Corner: memc3_infrastructure_inst/powerup_pll_locked_1 to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y63.CQ       Tcko                  0.447   memc3_infrastructure_inst/powerup_pll_locked_2
+                                                       memc3_infrastructure_inst/powerup_pll_locked_1
+    SLICE_X2Y65.A1       net (fanout=1)        0.683   memc3_infrastructure_inst/powerup_pll_locked_1
+    SLICE_X2Y65.A        Tilo                  0.203   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst11
+    SLICE_X14Y83.SR      net (fanout=55)       3.058   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst
+    SLICE_X14Y83.CLK     Trck                  0.217   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER<15>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.608ns (0.867ns logic, 3.741ns route)
+                                                       (18.8% logic, 81.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     8.545ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14 (FF)
+  Requirement:          12.800ns
+  Data Path Delay:      4.058ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.054ns (0.478 - 0.532)
+  Source Clock:         c3_mcb_drp_clk rising at 0.000ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.143ns
+
+  Clock Uncertainty:          0.143ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.276ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y65.AQ       Tcko                  0.447   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock
+    SLICE_X2Y65.A6       net (fanout=4)        0.133   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/syn_uiclk_pll_lock
+    SLICE_X2Y65.A        Tilo                  0.203   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/START_DYN_CAL_STATE_R1
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst11
+    SLICE_X14Y83.SR      net (fanout=55)       3.058   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/int_sys_rst
+    SLICE_X14Y83.CLK     Trck                  0.217   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER<15>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_200us_COUNTER_14
+    -------------------------------------------------  ---------------------------
+    Total                                      4.058ns (0.867ns logic, 3.191ns route)
+                                                       (21.4% logic, 78.6% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0" TS_SYS_CLK3 /
+        0.78125 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/memcell_addr_reg_3 (SLICE_X8Y66.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.387ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/IODRPCTRLR_MEMCELL_ADDR_3 (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/memcell_addr_reg_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.389ns (Levels of Logic = 0)
+  Clock Path Skew:      0.002ns (0.043 - 0.041)
+  Source Clock:         c3_mcb_drp_clk rising at 12.800ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/IODRPCTRLR_MEMCELL_ADDR_3 to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/memcell_addr_reg_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X9Y66.AMUX     Tshcko                0.244   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/counter_en
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/IODRPCTRLR_MEMCELL_ADDR_3
+    SLICE_X8Y66.CX       net (fanout=2)        0.097   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/IODRPCTRLR_MEMCELL_ADDR<3>
+    SLICE_X8Y66.CLK      Tckdi       (-Th)    -0.048   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/memcell_addr_reg<7>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/memcell_addr_reg_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.389ns (0.292ns logic, 0.097ns route)
+                                                       (75.1% logic, 24.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN (SLICE_X8Y80.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.417ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.417ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         c3_mcb_drp_clk rising at 12.800ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y80.AQ       Tcko                  0.200   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN
+    SLICE_X8Y80.A6       net (fanout=2)        0.027   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN
+    SLICE_X8Y80.CLK      Tah         (-Th)    -0.190   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN_rstpot
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/MCB_UICMDEN
+    -------------------------------------------------  ---------------------------
+    Total                                      0.417ns (0.390ns logic, 0.027ns route)
+                                                       (93.5% logic, 6.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0 (SLICE_X8Y63.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0 (FF)
+  Destination:          memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.423ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         c3_mcb_drp_clk rising at 12.800ns
+  Destination Clock:    c3_mcb_drp_clk rising at 12.800ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0 to memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X8Y63.AQ       Tcko                  0.200   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt<0>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0
+    SLICE_X8Y63.A6       net (fanout=7)        0.033   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt<0>
+    SLICE_X8Y63.CLK      Tah         (-Th)    -0.190   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt<0>
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/Mcount_bit_cnt_xor<0>11_INV_0
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/iodrp_controller/bit_cnt_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.423ns (0.390ns logic, 0.033ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_mcb_drp_clk_bufg_in_0" TS_SYS_CLK3 /
+        0.78125 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 11.070ns (period - min period limit)
+  Period: 12.800ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: memc3_infrastructure_inst/U_BUFG_CLK1/I0
+  Logical resource: memc3_infrastructure_inst/U_BUFG_CLK1/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: memc3_infrastructure_inst/mcb_drp_clk_bufg_in
+--------------------------------------------------------------------------------
+Slack: 11.800ns (period - min period limit)
+  Period: 12.800ns
+  Min period limit: 1.000ns (1000.000MHz) (Tcp)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/WAIT_SELFREFRESH_EXIT_DQS_CAL/CLK
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/gen_term_calib.mcb_soft_calibration_top_inst/mcb_soft_calibration_inst/Mshreg_SELFREFRESH_MCB_MODE_R2/CLK
+  Location pin: SLICE_X2Y66.CLK
+  Clock network: c3_mcb_drp_clk
+--------------------------------------------------------------------------------
+Slack: 11.800ns (period - min period limit)
+  Period: 12.800ns
+  Min period limit: 1.000ns (1000.000MHz) (Tmcbcper_UICLK)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/UICLK
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/UICLK
+  Location pin: MCB_X0Y1.UICLK
+  Clock network: c3_mcb_drp_clk
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_clk_2x_180_0 = PERIOD TIMEGRP   
+      "memc3_infrastructure_inst_clk_2x_180_0" TS_SYS_CLK3 / 6.25 PHASE 0.8     
+    ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.499ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_clk_2x_180_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk_2x_180_0" TS_SYS_CLK3 / 6.25 PHASE 0.8
+        ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.101ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 1.499ns (667.111MHz) (Tmcbcper_PLLCLK)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK1
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK1
+  Location pin: MCB_X0Y1.PLLCLK1
+  Clock network: c3_sysclk_2x_180
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_clk_2x_0_0 = PERIOD TIMEGRP     
+    "memc3_infrastructure_inst_clk_2x_0_0" TS_SYS_CLK3 / 6.25 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.499ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_clk_2x_0_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk_2x_0_0" TS_SYS_CLK3 / 6.25 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.101ns (period - min period limit)
+  Period: 1.600ns
+  Min period limit: 1.499ns (667.111MHz) (Tmcbcper_PLLCLK)
+  Physical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK0
+  Logical resource: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0/PLLCLK0
+  Location pin: MCB_X0Y1.PLLCLK0
+  Clock network: c3_sysclk_2x
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_memc3_infrastructure_inst_clk0_bufg_in_0 = PERIOD TIMEGRP 
+        "memc3_infrastructure_inst_clk0_bufg_in_0" TS_SYS_CLK3 / 1.5625 HIGH    
+     50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 4778 paths analyzed, 1491 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   5.276ns.
+--------------------------------------------------------------------------------
+
+Paths for end point adcfifo/state_FSM_FFd3 (SLICE_X25Y66.B6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.124ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0 (CPU)
+  Destination:          adcfifo/state_FSM_FFd3 (FF)
+  Requirement:          6.400ns
+  Data Path Delay:      5.122ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.027ns (0.599 - 0.626)
+  Source Clock:         c3_clk0 rising at 0.000ns
+  Destination Clock:    c3_clk0 rising at 6.400ns
+  Clock Uncertainty:    0.127ns
+
+  Clock Uncertainty:          0.127ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.244ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0 to adcfifo/state_FSM_FFd3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    MCB_X0Y1.P0RDEMPTY   Tmcbcko_RDEMPTY       2.270   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0
+    SLICE_X25Y66.B6      net (fanout=3)        2.530   c3_p0_rd_empty
+    SLICE_X25Y66.CLK     Tas                   0.322   adcfifo/state_FSM_FFd3
+                                                       adcfifo/state_FSM_FFd3-In
+                                                       adcfifo/state_FSM_FFd3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.122ns (2.592ns logic, 2.530ns route)
+                                                       (50.6% logic, 49.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point adcfifo/ob_data_4 (SLICE_X13Y57.A3), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.335ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0 (CPU)
+  Destination:          adcfifo/ob_data_4 (FF)
+  Requirement:          6.400ns
+  Data Path Delay:      4.916ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.022ns (0.233 - 0.255)
+  Source Clock:         c3_clk0 rising at 0.000ns
+  Destination Clock:    c3_clk0 rising at 6.400ns
+  Clock Uncertainty:    0.127ns
+
+  Clock Uncertainty:          0.127ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.244ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0 to adcfifo/ob_data_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    MCB_X0Y1.P0RDDATA4   Tmcbcko_RDDATA        2.700   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0
+    SLICE_X13Y57.A3      net (fanout=1)        1.989   c3_p0_rd_data<4>
+    SLICE_X13Y57.CLK     Tas                   0.227   adcfifo/ob_data<3>
+                                                       c3_p0_rd_data<4>_rt
+                                                       adcfifo/ob_data_4
+    -------------------------------------------------  ---------------------------
+    Total                                      4.916ns (2.927ns logic, 1.989ns route)
+                                                       (59.5% logic, 40.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point adcfifo/state_FSM_FFd2 (SLICE_X25Y66.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.346ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0 (CPU)
+  Destination:          adcfifo/state_FSM_FFd2 (FF)
+  Requirement:          6.400ns
+  Data Path Delay:      4.900ns (Levels of Logic = 1)
+  Clock Path Skew:      -0.027ns (0.599 - 0.626)
+  Source Clock:         c3_clk0 rising at 0.000ns
+  Destination Clock:    c3_clk0 rising at 6.400ns
+  Clock Uncertainty:    0.127ns
+
+  Clock Uncertainty:          0.127ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.244ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0 to adcfifo/state_FSM_FFd2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    MCB_X0Y1.P0RDEMPTY   Tmcbcko_RDEMPTY       2.270   memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0
+                                                       memc3_wrapper_inst/memc3_mcb_raw_wrapper_inst/samc_0
+    SLICE_X25Y66.A6      net (fanout=3)        2.308   c3_p0_rd_empty
+    SLICE_X25Y66.CLK     Tas                   0.322   adcfifo/state_FSM_FFd3
+                                                       adcfifo/state_FSM_FFd2-In1
+                                                       adcfifo/state_FSM_FFd2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.900ns (2.592ns logic, 2.308ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_memc3_infrastructure_inst_clk0_bufg_in_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk0_bufg_in_0" TS_SYS_CLK3 / 1.5625 HIGH
+        50%;
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_infrastructure_inst/rst0_sync_r_11 (SLICE_X3Y57.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.393ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               memc3_infrastructure_inst/rst0_sync_r_10 (FF)
+  Destination:          memc3_infrastructure_inst/rst0_sync_r_11 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.393ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         c3_clk0 rising at 6.400ns
+  Destination Clock:    c3_clk0 rising at 6.400ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: memc3_infrastructure_inst/rst0_sync_r_10 to memc3_infrastructure_inst/rst0_sync_r_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X3Y57.CQ       Tcko                  0.198   memc3_infrastructure_inst/rst0_sync_r<11>
+                                                       memc3_infrastructure_inst/rst0_sync_r_10
+    SLICE_X3Y57.DX       net (fanout=1)        0.136   memc3_infrastructure_inst/rst0_sync_r<10>
+    SLICE_X3Y57.CLK      Tckdi       (-Th)    -0.059   memc3_infrastructure_inst/rst0_sync_r<11>
+                                                       memc3_infrastructure_inst/rst0_sync_r_11
+    -------------------------------------------------  ---------------------------
+    Total                                      0.393ns (0.257ns logic, 0.136ns route)
+                                                       (65.4% logic, 34.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point memc3_infrastructure_inst/rst0_sync_r_24 (SLICE_X5Y54.DX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.393ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               memc3_infrastructure_inst/rst0_sync_r_23 (FF)
+  Destination:          memc3_infrastructure_inst/rst0_sync_r_24 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.393ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         c3_clk0 rising at 6.400ns
+  Destination Clock:    c3_clk0 rising at 6.400ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: memc3_infrastructure_inst/rst0_sync_r_23 to memc3_infrastructure_inst/rst0_sync_r_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X5Y54.CQ       Tcko                  0.198   memc3_infrastructure_inst/rst0_sync_r<24>
+                                                       memc3_infrastructure_inst/rst0_sync_r_23
+    SLICE_X5Y54.DX       net (fanout=1)        0.136   memc3_infrastructure_inst/rst0_sync_r<23>
+    SLICE_X5Y54.CLK      Tckdi       (-Th)    -0.059   memc3_infrastructure_inst/rst0_sync_r<24>
+                                                       memc3_infrastructure_inst/rst0_sync_r_24
+    -------------------------------------------------  ---------------------------
+    Total                                      0.393ns (0.257ns logic, 0.136ns route)
+                                                       (65.4% logic, 34.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_last_2 (SLICE_X31Y65.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.404ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_2 (FF)
+  Destination:          okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_last_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.404ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         c3_clk0 rising at 6.400ns
+  Destination Clock:    c3_clk0 rising at 6.400ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_2 to okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_last_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y65.CQ      Tcko                  0.198   okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg<3>
+                                                       okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_2
+    SLICE_X31Y65.C5      net (fanout=1)        0.051   okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg<2>
+    SLICE_X31Y65.CLK     Tah         (-Th)    -0.155   okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg<3>
+                                                       okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg<2>_rt
+                                                       okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_gc_asreg_last_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.404ns (0.353ns logic, 0.051ns route)
+                                                       (87.4% logic, 12.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_memc3_infrastructure_inst_clk0_bufg_in_0 = PERIOD TIMEGRP
+        "memc3_infrastructure_inst_clk0_bufg_in_0" TS_SYS_CLK3 / 1.5625 HIGH
+        50%;
+--------------------------------------------------------------------------------
+Slack: 3.276ns (period - min period limit)
+  Period: 6.400ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X1Y22.CLKA
+  Clock network: c3_clk0
+--------------------------------------------------------------------------------
+Slack: 3.276ns (period - min period limit)
+  Period: 6.400ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Logical resource: okPipeOut_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKA
+  Location pin: RAMB16_X1Y20.CLKA
+  Clock network: c3_clk0
+--------------------------------------------------------------------------------
+Slack: 3.276ns (period - min period limit)
+  Period: 6.400ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKB(Fmax))
+  Physical resource: okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKB
+  Logical resource: okPipeIn_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram/CLKB
+  Location pin: RAMB16_X2Y30.CLKB
+  Clock network: c3_clk0
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "okHostINOUT_grp" OFFSET = IN 2 ns VALID 4 ns BEFORE 
+COMP "okUH<0>"         "RISING";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 32 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.762ns.
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/iob_regs[15].regin0 (ILOGIC_X25Y1.D), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.238ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               okUHU<15> (PAD)
+  Destination:          okHI/iob_regs[15].regin0 (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      2.555ns (Levels of Logic = 2)
+  Clock Path Delay:     2.001ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: okUHU<15> to okHI/iob_regs[15].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AA20.I               Tiopi                 1.150   okUHU<15>
+                                                       okUHU<15>
+                                                       okHI/iob_regs[15].iobf0/IBUF
+                                                       ProtoComp520.IMUX.26
+    ILOGIC_X25Y1.D       net (fanout=1)        0.219   okHI/iobf0_o<15>
+    ILOGIC_X25Y1.CLK0    Tidock                1.186   okHI/okHC<20>
+                                                       ProtoComp525.D2OFFBYP_SRC.9
+                                                       okHI/iob_regs[15].regin0
+    -------------------------------------------------  ---------------------------
+    Total                                      2.555ns (2.336ns logic, 0.219ns route)
+                                                       (91.4% logic, 8.6% route)
+
+  Minimum Clock Path at Slow Process Corner: okUH<0> to okHI/iob_regs[15].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.990   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.776   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.105   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.592   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -4.150   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.836   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.197   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X25Y1.CLK0    net (fanout=420)      1.655   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      2.001ns (-2.858ns logic, 4.859ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/iob_regs[16].regin0 (ILOGIC_X23Y1.D), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.238ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               okUHU<16> (PAD)
+  Destination:          okHI/iob_regs[16].regin0 (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      2.555ns (Levels of Logic = 2)
+  Clock Path Delay:     2.001ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: okUHU<16> to okHI/iob_regs[16].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    T16.I                Tiopi                 1.150   okUHU<16>
+                                                       okUHU<16>
+                                                       okHI/iob_regs[16].iobf0/IBUF
+                                                       ProtoComp520.IMUX.29
+    ILOGIC_X23Y1.D       net (fanout=1)        0.219   okHI/iobf0_o<16>
+    ILOGIC_X23Y1.CLK0    Tidock                1.186   okHI/okHC<21>
+                                                       ProtoComp525.D2OFFBYP_SRC.12
+                                                       okHI/iob_regs[16].regin0
+    -------------------------------------------------  ---------------------------
+    Total                                      2.555ns (2.336ns logic, 0.219ns route)
+                                                       (91.4% logic, 8.6% route)
+
+  Minimum Clock Path at Slow Process Corner: okUH<0> to okHI/iob_regs[16].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.990   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.776   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.105   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.592   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -4.150   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.836   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.197   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X23Y1.CLK0    net (fanout=420)      1.655   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      2.001ns (-2.858ns logic, 4.859ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/iob_regs[25].regin0 (ILOGIC_X19Y1.D), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.238ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               okUHU<25> (PAD)
+  Destination:          okHI/iob_regs[25].regin0 (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      2.555ns (Levels of Logic = 2)
+  Clock Path Delay:     2.001ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: okUHU<25> to okHI/iob_regs[25].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y17.I                Tiopi                 1.150   okUHU<25>
+                                                       okUHU<25>
+                                                       okHI/iob_regs[25].iobf0/IBUF
+                                                       ProtoComp520.IMUX.32
+    ILOGIC_X19Y1.D       net (fanout=1)        0.219   okHI/iobf0_o<25>
+    ILOGIC_X19Y1.CLK0    Tidock                1.186   okHI/okHC<30>
+                                                       ProtoComp525.D2OFFBYP_SRC.15
+                                                       okHI/iob_regs[25].regin0
+    -------------------------------------------------  ---------------------------
+    Total                                      2.555ns (2.336ns logic, 0.219ns route)
+                                                       (91.4% logic, 8.6% route)
+
+  Minimum Clock Path at Slow Process Corner: okUH<0> to okHI/iob_regs[25].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.990   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.776   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.105   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.592   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -4.150   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.836   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.197   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X19Y1.CLK0    net (fanout=420)      1.655   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      2.001ns (-2.858ns logic, 4.859ns route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TIMEGRP "okHostINOUT_grp" OFFSET = IN 2 ns VALID 4 ns BEFORE COMP "okUH<0>"
+        "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/iob_regs[28].regin0 (ILOGIC_X7Y2.D), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      2.089ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               okUHU<28> (PAD)
+  Destination:          okHI/iob_regs[28].regin0 (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      1.352ns (Levels of Logic = 2)
+  Clock Path Delay:     1.921ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Fast Process Corner: okUHU<28> to okHI/iob_regs[28].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    V9.I                 Tiopi                 0.627   okUHU<28>
+                                                       okUHU<28>
+                                                       okHI/iob_regs[28].iobf0/IBUF
+                                                       ProtoComp520.IMUX.37
+    ILOGIC_X7Y2.D        net (fanout=1)        0.095   okHI/iobf0_o<28>
+    ILOGIC_X7Y2.CLK0     Tiockd      (-Th)    -0.630   okHI/okHC<33>
+                                                       ProtoComp525.D2OFFBYP_SRC.20
+                                                       okHI/iob_regs[28].regin0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.352ns (1.257ns logic, 0.095ns route)
+                                                       (93.0% logic, 7.0% route)
+
+  Maximum Clock Path at Fast Process Corner: okUH<0> to okHI/iob_regs[28].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.727   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.389   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.130   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.421   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -2.292   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.437   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.063   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X7Y2.CLK0     net (fanout=420)      1.046   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.921ns (-1.372ns logic, 3.293ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/iob_regs[29].regin0 (ILOGIC_X16Y2.D), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      2.110ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               okUHU<29> (PAD)
+  Destination:          okHI/iob_regs[29].regin0 (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      1.352ns (Levels of Logic = 2)
+  Clock Path Delay:     1.900ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Fast Process Corner: okUHU<29> to okHI/iob_regs[29].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AB15.I               Tiopi                 0.627   okUHU<29>
+                                                       okUHU<29>
+                                                       okHI/iob_regs[29].iobf0/IBUF
+                                                       ProtoComp520.IMUX.38
+    ILOGIC_X16Y2.D       net (fanout=1)        0.095   okHI/iobf0_o<29>
+    ILOGIC_X16Y2.CLK0    Tiockd      (-Th)    -0.630   okHI/okHC<34>
+                                                       ProtoComp525.D2OFFBYP_SRC.21
+                                                       okHI/iob_regs[29].regin0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.352ns (1.257ns logic, 0.095ns route)
+                                                       (93.0% logic, 7.0% route)
+
+  Maximum Clock Path at Fast Process Corner: okUH<0> to okHI/iob_regs[29].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.727   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.389   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.130   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.421   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -2.292   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.437   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.063   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X16Y2.CLK0    net (fanout=420)      1.025   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.900ns (-1.372ns logic, 3.272ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/iob_regs[3].regin0 (ILOGIC_X20Y2.D), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      2.111ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               okUHU<3> (PAD)
+  Destination:          okHI/iob_regs[3].regin0 (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      1.352ns (Levels of Logic = 2)
+  Clock Path Delay:     1.899ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Fast Process Corner: okUHU<3> to okHI/iob_regs[3].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AB18.I               Tiopi                 0.627   okUHU<3>
+                                                       okUHU<3>
+                                                       okHI/iob_regs[3].iobf0/IBUF
+                                                       ProtoComp520.IMUX.44
+    ILOGIC_X20Y2.D       net (fanout=1)        0.095   okHI/iobf0_o<3>
+    ILOGIC_X20Y2.CLK0    Tiockd      (-Th)    -0.630   okHI/okHC<8>
+                                                       ProtoComp525.D2OFFBYP_SRC.29
+                                                       okHI/iob_regs[3].regin0
+    -------------------------------------------------  ---------------------------
+    Total                                      1.352ns (1.257ns logic, 0.095ns route)
+                                                       (93.0% logic, 7.0% route)
+
+  Maximum Clock Path at Fast Process Corner: okUH<0> to okHI/iob_regs[3].regin0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.727   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.389   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.130   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.421   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -2.292   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.437   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.063   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X20Y2.CLK0    net (fanout=420)      1.024   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.899ns (-1.372ns logic, 3.271ns route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "okHostINOUT_grp" OFFSET = OUT 8 ns AFTER COMP 
+"okUH<0>" "RISING";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "okHostIN_grp" OFFSET = IN 2 ns VALID 2 ns BEFORE 
+COMP "okUH<0>"         "RISING";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 4 paths analyzed, 4 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   1.777ns.
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin0a (ILOGIC_X4Y1.D), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.223ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               okUH<1> (PAD)
+  Destination:          okHI/regctrlin0a (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      2.555ns (Levels of Logic = 2)
+  Clock Path Delay:     1.986ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: okUH<1> to okHI/regctrlin0a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AA4.I                Tiopi                 1.150   okUH<1>
+                                                       okUH<1>
+                                                       okUH_1_IBUF
+                                                       ProtoComp522.IMUX.1
+    ILOGIC_X4Y1.D        net (fanout=1)        0.219   okUH_1_IBUF
+    ILOGIC_X4Y1.CLK0     Tidock                1.186   okHI/okUHx<0>
+                                                       ProtoComp525.D2OFFBYP_SRC.22
+                                                       okHI/regctrlin0a
+    -------------------------------------------------  ---------------------------
+    Total                                      2.555ns (2.336ns logic, 0.219ns route)
+                                                       (91.4% logic, 8.6% route)
+
+  Minimum Clock Path at Slow Process Corner: okUH<0> to okHI/regctrlin0a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.990   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.776   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.105   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.592   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -4.150   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.836   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.197   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X4Y1.CLK0     net (fanout=420)      1.640   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.986ns (-2.858ns logic, 4.844ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin2a (ILOGIC_X5Y0.D), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.271ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               okUH<3> (PAD)
+  Destination:          okHI/regctrlin2a (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      2.507ns (Levels of Logic = 2)
+  Clock Path Delay:     1.986ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: okUH<3> to okHI/regctrlin2a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y6.I                 Tiopi                 1.150   okUH<3>
+                                                       okUH<3>
+                                                       okUH_3_IBUF
+                                                       ProtoComp522.IMUX.3
+    ILOGIC_X5Y0.D        net (fanout=1)        0.171   okUH_3_IBUF
+    ILOGIC_X5Y0.CLK0     Tidock                1.186   okHI/okUHx<2>
+                                                       ProtoComp525.D2OFFBYP_SRC.24
+                                                       okHI/regctrlin2a
+    -------------------------------------------------  ---------------------------
+    Total                                      2.507ns (2.336ns logic, 0.171ns route)
+                                                       (93.2% logic, 6.8% route)
+
+  Minimum Clock Path at Slow Process Corner: okUH<0> to okHI/regctrlin2a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.990   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.776   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.105   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.592   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -4.150   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.836   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.197   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X5Y0.CLK0     net (fanout=420)      1.640   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.986ns (-2.858ns logic, 4.844ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin3a (ILOGIC_X26Y2.D), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     0.310ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               okUH<4> (PAD)
+  Destination:          okHI/regctrlin3a (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          2.000ns
+  Data Path Delay:      2.446ns (Levels of Logic = 2)
+  Clock Path Delay:     1.964ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: okUH<4> to okHI/regctrlin3a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AB21.I               Tiopi                 1.150   okUH<4>
+                                                       okUH<4>
+                                                       okUH_4_IBUF
+                                                       ProtoComp522.IMUX.4
+    ILOGIC_X26Y2.D       net (fanout=1)        0.110   okUH_4_IBUF
+    ILOGIC_X26Y2.CLK0    Tidock                1.186   okHI/okUHx<3>
+                                                       ProtoComp525.D2OFFBYP_SRC.25
+                                                       okHI/regctrlin3a
+    -------------------------------------------------  ---------------------------
+    Total                                      2.446ns (2.336ns logic, 0.110ns route)
+                                                       (95.5% logic, 4.5% route)
+
+  Minimum Clock Path at Slow Process Corner: okUH<0> to okHI/regctrlin3a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.990   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.776   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.105   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.592   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -4.150   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.836   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.197   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X26Y2.CLK0    net (fanout=420)      1.618   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.964ns (-2.858ns logic, 4.822ns route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TIMEGRP "okHostIN_grp" OFFSET = IN 2 ns VALID 2 ns BEFORE COMP "okUH<0>"
+        "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin1a (ILOGIC_X4Y2.D), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.127ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               okUH<2> (PAD)
+  Destination:          okHI/regctrlin1a (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          0.000ns
+  Data Path Delay:      1.352ns (Levels of Logic = 2)
+  Clock Path Delay:     1.883ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Fast Process Corner: okUH<2> to okHI/regctrlin1a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AB3.I                Tiopi                 0.627   okUH<2>
+                                                       okUH<2>
+                                                       okUH_2_IBUF
+                                                       ProtoComp522.IMUX.2
+    ILOGIC_X4Y2.D        net (fanout=1)        0.095   okUH_2_IBUF
+    ILOGIC_X4Y2.CLK0     Tiockd      (-Th)    -0.630   okHI/okUHx<1>
+                                                       ProtoComp525.D2OFFBYP_SRC.23
+                                                       okHI/regctrlin1a
+    -------------------------------------------------  ---------------------------
+    Total                                      1.352ns (1.257ns logic, 0.095ns route)
+                                                       (93.0% logic, 7.0% route)
+
+  Maximum Clock Path at Fast Process Corner: okUH<0> to okHI/regctrlin1a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.727   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.389   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.130   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.421   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -2.292   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.437   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.063   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X4Y2.CLK0     net (fanout=420)      1.008   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.883ns (-1.372ns logic, 3.255ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin3a (ILOGIC_X26Y2.D), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.148ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               okUH<4> (PAD)
+  Destination:          okHI/regctrlin3a (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          0.000ns
+  Data Path Delay:      1.352ns (Levels of Logic = 2)
+  Clock Path Delay:     1.862ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Fast Process Corner: okUH<4> to okHI/regctrlin3a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AB21.I               Tiopi                 0.627   okUH<4>
+                                                       okUH<4>
+                                                       okUH_4_IBUF
+                                                       ProtoComp522.IMUX.4
+    ILOGIC_X26Y2.D       net (fanout=1)        0.095   okUH_4_IBUF
+    ILOGIC_X26Y2.CLK0    Tiockd      (-Th)    -0.630   okHI/okUHx<3>
+                                                       ProtoComp525.D2OFFBYP_SRC.25
+                                                       okHI/regctrlin3a
+    -------------------------------------------------  ---------------------------
+    Total                                      1.352ns (1.257ns logic, 0.095ns route)
+                                                       (93.0% logic, 7.0% route)
+
+  Maximum Clock Path at Fast Process Corner: okUH<0> to okHI/regctrlin3a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.727   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.389   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.130   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.421   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -2.292   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.437   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.063   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X26Y2.CLK0    net (fanout=420)      0.987   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.862ns (-1.372ns logic, 3.234ns route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point okHI/regctrlin2a (ILOGIC_X5Y0.D), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.187ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               okUH<3> (PAD)
+  Destination:          okHI/regctrlin2a (FF)
+  Destination Clock:    okClk rising at -0.933ns
+  Requirement:          0.000ns
+  Data Path Delay:      1.413ns (Levels of Logic = 2)
+  Clock Path Delay:     1.884ns (Levels of Logic = 4)
+  Clock Uncertainty:    0.275ns
+
+  Clock Uncertainty:          0.275ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.050ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.200ns
+    Phase Error (PE):           0.150ns
+
+  Minimum Data Path at Fast Process Corner: okUH<3> to okHI/regctrlin2a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y6.I                 Tiopi                 0.627   okUH<3>
+                                                       okUH<3>
+                                                       okUH_3_IBUF
+                                                       ProtoComp522.IMUX.3
+    ILOGIC_X5Y0.D        net (fanout=1)        0.156   okUH_3_IBUF
+    ILOGIC_X5Y0.CLK0     Tiockd      (-Th)    -0.630   okHI/okUHx<2>
+                                                       ProtoComp525.D2OFFBYP_SRC.24
+                                                       okHI/regctrlin2a
+    -------------------------------------------------  ---------------------------
+    Total                                      1.413ns (1.257ns logic, 0.156ns route)
+                                                       (89.0% logic, 11.0% route)
+
+  Maximum Clock Path at Fast Process Corner: okUH<0> to okHI/regctrlin2a
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    Y12.I                Tiopi                 0.727   okUH<0>
+                                                       okUH<0>
+                                                       okHI/hi_clk_bufg
+                                                       ProtoComp522.IMUX
+    BUFIO2_X3Y1.I        net (fanout=1)        1.389   okHI/okUH0_ibufg
+    BUFIO2_X3Y1.DIVCLK   Tbufcko_DIVCLK        0.130   SP6_BUFIO_INSERT_ML_BUFIO2_0
+                                                       SP6_BUFIO_INSERT_ML_BUFIO2_0
+    DCM_X0Y1.CLKIN       net (fanout=1)        0.421   okHI/dcm0_ML_NEW_DIVCLK
+    DCM_X0Y1.CLK0        Tdmcko_CLK           -2.292   okHI/dcm0
+                                                       okHI/dcm0
+    BUFGMUX_X2Y3.I0      net (fanout=1)        0.437   okHI/dcm0_clk0
+    BUFGMUX_X2Y3.O       Tgi0o                 0.063   okHI/dcm0_bufg
+                                                       okHI/dcm0_bufg
+    ILOGIC_X5Y0.CLK0     net (fanout=420)      1.009   okClk
+    -------------------------------------------------  ---------------------------
+    Total                                      1.884ns (-1.372ns logic, 3.256ns route)
+
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_okHostClk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_okHostClk                   |      9.960ns|      5.340ns|      8.822ns|            0|            0|            0|        30057|
+| TS_okHI_dcm0_clk0             |      9.960ns|      8.822ns|          N/A|            0|            0|        30057|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_okSysClk
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_okSysClk                    |     10.000ns|      3.334ns|      9.369ns|            0|            0|            0|            0|
+| TS_memc3_infrastructure_inst_m|     12.800ns|      1.730ns|          N/A|            0|            0|            0|            0|
+| cb_drp_clk_bufg_in            |             |             |             |             |             |             |             |
+| TS_memc3_infrastructure_inst_c|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| lk_2x_180                     |             |             |             |             |             |             |             |
+| TS_memc3_infrastructure_inst_c|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| lk_2x_0                       |             |             |             |             |             |             |             |
+| TS_memc3_infrastructure_inst_c|      6.400ns|      3.124ns|          N/A|            0|            0|            0|            0|
+| lk0_bufg_in                   |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+Derived Constraints for TS_SYS_CLK3
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_SYS_CLK3                    |     10.000ns|      3.334ns|      9.369ns|            0|            0|            0|        19383|
+| TS_memc3_infrastructure_inst_m|     12.800ns|     10.056ns|          N/A|            0|            0|        14605|            0|
+| cb_drp_clk_bufg_in_0          |             |             |             |             |             |             |             |
+| TS_memc3_infrastructure_inst_c|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| lk_2x_180_0                   |             |             |             |             |             |             |             |
+| TS_memc3_infrastructure_inst_c|      1.600ns|      1.499ns|          N/A|            0|            0|            0|            0|
+| lk_2x_0_0                     |             |             |             |             |             |             |             |
+| TS_memc3_infrastructure_inst_c|      6.400ns|      5.276ns|          N/A|            0|            0|         4778|            0|
+| lk0_bufg_in_0                 |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock okUH<0>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+okUH<1>     |    1.777(R)|      SLOW  |   -0.216(R)|      FAST  |okClk             |  -0.933|
+okUH<2>     |    1.669(R)|      SLOW  |   -0.127(R)|      FAST  |okClk             |  -0.933|
+okUH<3>     |    1.729(R)|      SLOW  |   -0.187(R)|      FAST  |okClk             |  -0.933|
+okUH<4>     |    1.690(R)|      SLOW  |   -0.148(R)|      FAST  |okClk             |  -0.933|
+okUHU<0>    |    1.691(R)|      SLOW  |   -0.149(R)|      FAST  |okClk             |  -0.933|
+okUHU<1>    |    1.739(R)|      SLOW  |   -0.178(R)|      FAST  |okClk             |  -0.933|
+okUHU<2>    |    1.699(R)|      SLOW  |   -0.138(R)|      FAST  |okClk             |  -0.933|
+okUHU<3>    |    1.653(R)|      SLOW  |   -0.111(R)|      FAST  |okClk             |  -0.933|
+okUHU<4>    |    1.701(R)|      SLOW  |   -0.140(R)|      FAST  |okClk             |  -0.933|
+okUHU<5>    |    1.714(R)|      SLOW  |   -0.172(R)|      FAST  |okClk             |  -0.933|
+okUHU<6>    |    1.692(R)|      SLOW  |   -0.150(R)|      FAST  |okClk             |  -0.933|
+okUHU<7>    |    1.740(R)|      SLOW  |   -0.179(R)|      FAST  |okClk             |  -0.933|
+okUHU<8>    |    1.681(R)|      SLOW  |   -0.120(R)|      FAST  |okClk             |  -0.933|
+okUHU<9>    |    1.692(R)|      SLOW  |   -0.150(R)|      FAST  |okClk             |  -0.933|
+okUHU<10>   |    1.740(R)|      SLOW  |   -0.179(R)|      FAST  |okClk             |  -0.933|
+okUHU<11>   |    1.692(R)|      SLOW  |   -0.150(R)|      FAST  |okClk             |  -0.933|
+okUHU<12>   |    1.740(R)|      SLOW  |   -0.179(R)|      FAST  |okClk             |  -0.933|
+okUHU<13>   |    1.654(R)|      SLOW  |   -0.112(R)|      FAST  |okClk             |  -0.933|
+okUHU<14>   |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |okClk             |  -0.933|
+okUHU<15>   |    1.762(R)|      SLOW  |   -0.201(R)|      FAST  |okClk             |  -0.933|
+okUHU<16>   |    1.762(R)|      SLOW  |   -0.201(R)|      FAST  |okClk             |  -0.933|
+okUHU<17>   |    1.678(R)|      SLOW  |   -0.117(R)|      FAST  |okClk             |  -0.933|
+okUHU<18>   |    1.654(R)|      SLOW  |   -0.112(R)|      FAST  |okClk             |  -0.933|
+okUHU<19>   |    1.700(R)|      SLOW  |   -0.139(R)|      FAST  |okClk             |  -0.933|
+okUHU<20>   |    1.654(R)|      SLOW  |   -0.112(R)|      FAST  |okClk             |  -0.933|
+okUHU<21>   |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |okClk             |  -0.933|
+okUHU<22>   |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |okClk             |  -0.933|
+okUHU<23>   |    1.714(R)|      SLOW  |   -0.172(R)|      FAST  |okClk             |  -0.933|
+okUHU<24>   |    1.681(R)|      SLOW  |   -0.120(R)|      FAST  |okClk             |  -0.933|
+okUHU<25>   |    1.762(R)|      SLOW  |   -0.201(R)|      FAST  |okClk             |  -0.933|
+okUHU<26>   |    1.700(R)|      SLOW  |   -0.139(R)|      FAST  |okClk             |  -0.933|
+okUHU<27>   |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |okClk             |  -0.933|
+okUHU<28>   |    1.631(R)|      SLOW  |   -0.089(R)|      FAST  |okClk             |  -0.933|
+okUHU<29>   |    1.652(R)|      SLOW  |   -0.110(R)|      FAST  |okClk             |  -0.933|
+okUHU<30>   |    1.681(R)|      SLOW  |   -0.120(R)|      FAST  |okClk             |  -0.933|
+okUHU<31>   |    1.693(R)|      SLOW  |   -0.151(R)|      FAST  |okClk             |  -0.933|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock okUH<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+okUH<0>        |    8.822|    3.107|    3.871|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clkn
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clkn       |    8.227|         |         |         |
+sys_clkp       |    8.227|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sys_clkp
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+sys_clkn       |    8.227|         |         |         |
+sys_clkp       |    8.227|         |         |         |
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "okHostINOUT_grp" OFFSET = IN 2 ns VALID 4 ns BEFORE COMP "okUH<0>"         "RISING";
+Worst Case Data Window 1.673; Ideal Clock Offset To Actual Clock 0.926; 
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+                  |            |  Process   |            |  Process   |  Setup  |  Hold   |Source Offset|
+Source            |   Setup    |   Corner   |    Hold    |   Corner   |  Slack  |  Slack  |  To Center  |
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+okUHU<0>          |    1.691(R)|      SLOW  |   -0.149(R)|      FAST  |    0.309|    2.149|       -0.920|
+okUHU<1>          |    1.739(R)|      SLOW  |   -0.178(R)|      FAST  |    0.261|    2.178|       -0.958|
+okUHU<2>          |    1.699(R)|      SLOW  |   -0.138(R)|      FAST  |    0.301|    2.138|       -0.919|
+okUHU<3>          |    1.653(R)|      SLOW  |   -0.111(R)|      FAST  |    0.347|    2.111|       -0.882|
+okUHU<4>          |    1.701(R)|      SLOW  |   -0.140(R)|      FAST  |    0.299|    2.140|       -0.921|
+okUHU<5>          |    1.714(R)|      SLOW  |   -0.172(R)|      FAST  |    0.286|    2.172|       -0.943|
+okUHU<6>          |    1.692(R)|      SLOW  |   -0.150(R)|      FAST  |    0.308|    2.150|       -0.921|
+okUHU<7>          |    1.740(R)|      SLOW  |   -0.179(R)|      FAST  |    0.260|    2.179|       -0.959|
+okUHU<8>          |    1.681(R)|      SLOW  |   -0.120(R)|      FAST  |    0.319|    2.120|       -0.901|
+okUHU<9>          |    1.692(R)|      SLOW  |   -0.150(R)|      FAST  |    0.308|    2.150|       -0.921|
+okUHU<10>         |    1.740(R)|      SLOW  |   -0.179(R)|      FAST  |    0.260|    2.179|       -0.959|
+okUHU<11>         |    1.692(R)|      SLOW  |   -0.150(R)|      FAST  |    0.308|    2.150|       -0.921|
+okUHU<12>         |    1.740(R)|      SLOW  |   -0.179(R)|      FAST  |    0.260|    2.179|       -0.959|
+okUHU<13>         |    1.654(R)|      SLOW  |   -0.112(R)|      FAST  |    0.346|    2.112|       -0.883|
+okUHU<14>         |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |    0.298|    2.141|       -0.922|
+okUHU<15>         |    1.762(R)|      SLOW  |   -0.201(R)|      FAST  |    0.238|    2.201|       -0.982|
+okUHU<16>         |    1.762(R)|      SLOW  |   -0.201(R)|      FAST  |    0.238|    2.201|       -0.982|
+okUHU<17>         |    1.678(R)|      SLOW  |   -0.117(R)|      FAST  |    0.322|    2.117|       -0.898|
+okUHU<18>         |    1.654(R)|      SLOW  |   -0.112(R)|      FAST  |    0.346|    2.112|       -0.883|
+okUHU<19>         |    1.700(R)|      SLOW  |   -0.139(R)|      FAST  |    0.300|    2.139|       -0.919|
+okUHU<20>         |    1.654(R)|      SLOW  |   -0.112(R)|      FAST  |    0.346|    2.112|       -0.883|
+okUHU<21>         |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |    0.298|    2.141|       -0.922|
+okUHU<22>         |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |    0.298|    2.141|       -0.922|
+okUHU<23>         |    1.714(R)|      SLOW  |   -0.172(R)|      FAST  |    0.286|    2.172|       -0.943|
+okUHU<24>         |    1.681(R)|      SLOW  |   -0.120(R)|      FAST  |    0.319|    2.120|       -0.901|
+okUHU<25>         |    1.762(R)|      SLOW  |   -0.201(R)|      FAST  |    0.238|    2.201|       -0.982|
+okUHU<26>         |    1.700(R)|      SLOW  |   -0.139(R)|      FAST  |    0.300|    2.139|       -0.919|
+okUHU<27>         |    1.702(R)|      SLOW  |   -0.141(R)|      FAST  |    0.298|    2.141|       -0.922|
+okUHU<28>         |    1.631(R)|      SLOW  |   -0.089(R)|      FAST  |    0.369|    2.089|       -0.860|
+okUHU<29>         |    1.652(R)|      SLOW  |   -0.110(R)|      FAST  |    0.348|    2.110|       -0.881|
+okUHU<30>         |    1.681(R)|      SLOW  |   -0.120(R)|      FAST  |    0.319|    2.120|       -0.901|
+okUHU<31>         |    1.693(R)|      SLOW  |   -0.151(R)|      FAST  |    0.307|    2.151|       -0.922|
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+Worst Case Summary|       1.762|         -  |      -0.089|         -  |    0.238|    2.089|             |
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+
+TIMEGRP "okHostIN_grp" OFFSET = IN 2 ns VALID 2 ns BEFORE COMP "okUH<0>"         "RISING";
+Worst Case Data Window 1.650; Ideal Clock Offset To Actual Clock -0.048; 
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+                  |            |  Process   |            |  Process   |  Setup  |  Hold   |Source Offset|
+Source            |   Setup    |   Corner   |    Hold    |   Corner   |  Slack  |  Slack  |  To Center  |
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+okUH<1>           |    1.777(R)|      SLOW  |   -0.216(R)|      FAST  |    0.223|    0.216|        0.004|
+okUH<2>           |    1.669(R)|      SLOW  |   -0.127(R)|      FAST  |    0.331|    0.127|        0.102|
+okUH<3>           |    1.729(R)|      SLOW  |   -0.187(R)|      FAST  |    0.271|    0.187|        0.042|
+okUH<4>           |    1.690(R)|      SLOW  |   -0.148(R)|      FAST  |    0.310|    0.148|        0.081|
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+Worst Case Summary|       1.777|         -  |      -0.127|         -  |    0.223|    0.127|             |
+------------------+------------+------------+------------+------------+---------+---------+-------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 49476 paths, 0 nets, and 9960 connections
+
+Design statistics:
+   Minimum period:  10.056ns{1}   (Maximum frequency:  99.443MHz)
+   Minimum input required time before clock:   1.777ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Thu Mar 13 14:35:28 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 318 MB
+
+
+

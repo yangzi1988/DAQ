@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/BioEE_clkdivider1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/BioEE_ddr2_fifo2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/BioEE_fpga.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/BioEE_vector1_32in_32out.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/Core/fifo_32in_16out_16k.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/Core/fifo_w16_2048_r32_1024.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/Core/fifo_w32_1024_r32_1024.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/iodrp_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/iodrp_mcb_controller.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/mcb_raw_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/mcb_soft_calibration.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/mcb_soft_calibration_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/memc3_infrastructure.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/MIG/memc3_wrapper.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/userdata/ctow/chris_xilinx14_spartan6_USB3_v1/xilinx14_spartan6_USB3/okLibrary.v&quot; into library work</arg>
+</msg>
+
+</messages>
+

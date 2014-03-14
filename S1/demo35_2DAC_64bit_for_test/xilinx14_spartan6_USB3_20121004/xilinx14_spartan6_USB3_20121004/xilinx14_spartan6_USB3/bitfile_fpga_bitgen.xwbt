@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\userdata\ZiYang\Opal Kelly\64bits_solution\demo35_2DAC_64bit_for_test\xilinx14_spartan6_USB3_20121004\xilinx14_spartan6_USB3_20121004\xilinx14_spartan6_USB3\bitfile_fpga.ncd
+OUTFILE=C:\userdata\ZiYang\Opal Kelly\64bits_solution\demo35_2DAC_64bit_for_test\xilinx14_spartan6_USB3_20121004\xilinx14_spartan6_USB3_20121004\xilinx14_spartan6_USB3\bitfile_fpga.bit
+FAMILY=Spartan6
+PART=xc6slx45-3fgg484
+WORKINGDIR=C:\userdata\ZiYang\Opal Kelly\64bits_solution\demo35_2DAC_64bit_for_test\xilinx14_spartan6_USB3_20121004\xilinx14_spartan6_USB3_20121004\xilinx14_spartan6_USB3
+LICENSE=WebPack
+USER_INFO=207362308_0_0_917
