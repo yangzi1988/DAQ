@@ -1,0 +1,98 @@
+Release 14.1 - par P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Thu Mar 13 14:35:19 2014
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 86 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O
+   okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O
+   xbusn<10>_IBUF
+   xbusn<11>_IBUF
+   xbusn<12>_IBUF
+   xbusn<14>_IBUF
+   xbusn<16>_IBUF
+   xbusn<18>_IBUF
+   xbusn<20>_IBUF
+   xbusn<22>_IBUF
+   xbusn<24>_IBUF
+   xbusn<8>_IBUF
+   xbusn<9>_IBUF
+   xbusp<10>_IBUF
+   xbusp<11>_IBUF
+   xbusp<12>_IBUF
+   xbusp<13>_IBUF
+   xbusp<14>_IBUF
+   xbusp<16>_IBUF
+   xbusp<18>_IBUF
+   xbusp<20>_IBUF
+   xbusp<22>_IBUF
+   xbusp<24>_IBUF
+   xbusp<8>_IBUF
+   xbusp<9>_IBUF
+   xclk1_IBUF
+   xclk2_IBUF
+   ybusn<0>_IBUF
+   ybusn<10>_IBUF
+   ybusn<11>_IBUF
+   ybusn<12>_IBUF
+   ybusn<13>_IBUF
+   ybusn<14>_IBUF
+   ybusn<15>_IBUF
+   ybusn<16>_IBUF
+   ybusn<17>_IBUF
+   ybusn<18>_IBUF
+   ybusn<19>_IBUF
+   ybusn<1>_IBUF
+   ybusn<20>_IBUF
+   ybusn<21>_IBUF
+   ybusn<22>_IBUF
+   ybusn<23>_IBUF
+   ybusn<24>_IBUF
+   ybusn<25>_IBUF
+   ybusn<26>_IBUF
+   ybusn<27>_IBUF
+   ybusn<28>_IBUF
+   ybusn<2>_IBUF
+   ybusn<3>_IBUF
+   ybusn<4>_IBUF
+   ybusn<5>_IBUF
+   ybusn<6>_IBUF
+   ybusn<7>_IBUF
+   ybusn<8>_IBUF
+   ybusn<9>_IBUF
+   ybusp<10>_IBUF
+   ybusp<11>_IBUF
+   ybusp<12>_IBUF
+   ybusp<13>_IBUF
+   ybusp<14>_IBUF
+   ybusp<15>_IBUF
+   ybusp<16>_IBUF
+   ybusp<17>_IBUF
+   ybusp<18>_IBUF
+   ybusp<19>_IBUF
+   ybusp<1>_IBUF
+   ybusp<20>_IBUF
+   ybusp<21>_IBUF
+   ybusp<22>_IBUF
+   ybusp<23>_IBUF
+   ybusp<24>_IBUF
+   ybusp<25>_IBUF
+   ybusp<26>_IBUF
+   ybusp<27>_IBUF
+   ybusp<28>_IBUF
+   ybusp<2>_IBUF
+   ybusp<3>_IBUF
+   ybusp<4>_IBUF
+   ybusp<5>_IBUF
+   ybusp<6>_IBUF
+   ybusp<7>_IBUF
+   ybusp<8>_IBUF
+   ybusp<9>_IBUF
+   yclk1_IBUF
+   yclk2_IBUF
+
+
