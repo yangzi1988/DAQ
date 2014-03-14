@@ -1,7 +1,11 @@
+Description:
+ 
+   This is a git repositor for the Rosenstein Group's DAQ Software.
+
 
 Folder References:
 
-   Main = MERGE VERSION 3;
+   Main = Merge of Zi's & Chris' Code ('MERGE 3');
 
    S1 = SOURCE 1 = Zi's Code ('demo35_2DAC_64bit_for_test');
 
