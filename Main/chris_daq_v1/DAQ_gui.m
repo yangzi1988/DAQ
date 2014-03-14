@@ -22,7 +22,7 @@ function varargout = DAQ_gui(varargin)
 
 % Edit the above text to modify the response to help DAQ_gui
 
-% Last Modified by GUIDE v2.5 04-Mar-2014 20:25:24
+% Last Modified by GUIDE v2.5 14-Mar-2014 18:06:31
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1989,3 +1989,95 @@ if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgr
     set(hObject,'BackgroundColor','white');
 end
 
+
+
+
+function text_triggerdetected_Callback(hObject, eventdata, handles)
+% hObject    handle to text_triggerdetected (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of text_triggerdetected as text
+%        str2double(get(hObject,'String')) returns contents of text_triggerdetected as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function text_triggerdetected_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to text_triggerdetected (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function text_FSMee_Callback(hObject, eventdata, handles)
+% hObject    handle to text_FSMee (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of text_FSMee as text
+%        str2double(get(hObject,'String')) returns contents of text_FSMee as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function text_FSMee_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to text_FSMee (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function text_FSM_Callback(hObject, eventdata, handles)
+% hObject    handle to text_FSM (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of text_FSM as text
+%        str2double(get(hObject,'String')) returns contents of text_FSM as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function text_FSM_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to text_FSM (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit52_Callback(hObject, eventdata, handles)
+% hObject    handle to edit52 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit52 as text
+%        str2double(get(hObject,'String')) returns contents of edit52 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit52_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit52 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end

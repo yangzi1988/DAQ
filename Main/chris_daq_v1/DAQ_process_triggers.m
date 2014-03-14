@@ -104,8 +104,8 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                     
  %            1234:         
 %                     mylogdir = ['logfiles\' get(handles.edit_logdir,'String')];
-%                     logfilename = [mylogdir '\' get(handles.edit_logname,'String') mytimestampstring];
-%                     fprintf('log file: %s\n',logfilename);
+%                     ADClogfilename = [mylogdir '\' get(handles.edit_logname,'String') mytimestampstring];
+%                     fprintf('log file: %s\n',ADClogfilename);
 
                     SETUP_TIAgain = str2double(get(handles.edit_gain_Mohm,'String'))*1e6;
                     SETUP_preADCgain = str2double(get(handles.edit_preADCgain,'String'));
@@ -123,13 +123,20 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                         mkdir(mylogdir);
                     end
                     
-                    logADCfid = fopen([logfilename '.log'],'a');
-                    logsetupname = [logfilename '.mat'];
-                    save(logsetupname,                  ...
-                            'ADCSAMPLERATE',                    ...
-                            'mytimestamp',                      ...
+                    logADCfid = fopen([ADClogfilename '.log'],'a');
+                    logDACfid = fopen([DAClogfilename '.log'],'a');
+                    
+%                     logADCfid = fopen([ADClogfilename '.log'],'a');
+
+                    logsetupname = [ADClogfilename '.mat'];
+                    save(logsetupname,                         ...
+                            'ADCSAMPLERATE',                   ...
+                            'mytimestamp',                     ...
                             'bias2value',                      ...
-                            'SETUP*');
+                            'SETUP*',                          ...
+                            'DACvalues');   %TEMPORARY ADDITION 9/26/2013                        
+                        
+%                             'SETUP*'); % 1234:
                     ADClogreset=0;
                 end
 
@@ -137,11 +144,15 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                     ADClogsize = ADClogsize + 2*length(readvalues);
                     fwrite(logADCfid,readvalues,'uint16');
                     %fwrite(logADCfid,readbytes,'uint8');
+                    
+                    fwrite(logDACfid,DACvalues,'uint16');
+
                 end
                 
             else
                 if(logADCfid>0)
                     fclose(logADCfid);
+                    fclose(logDACfid);
                 end
             end
 
@@ -188,8 +199,10 @@ function returnval = DAQ_process_triggers(obj, event, handles)
             triggerindex = find(triggervalues>0,1);
             if(~isempty(triggerindex))
                 previewoffsetindex = triggerindex;
+                set(handles.text_triggerdetected,'Visible','on'); % 4321:                
             else
                 previewoffsetindex = 1;
+                set(handles.text_triggerdetected,'Visible','off'); % 4321:             
             end
 
             previewindexstart = previewoffsetindex - 0.5*(displaybuffersize*displaysubsample*ADCnumsignals);
@@ -248,7 +261,6 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                     end
                     
                     %plot((100:(displaybuffersize-100))/(ADCSAMPLERATE/displaysubsample),mycurrentoffset*1e9+displaybuffer(100:(displaybuffersize-100))./(mygain*-1e-9),['-' colors(sampleshift)],'MarkerSize',5);
-%                     plot(((10:(displaybuffersize-10))/(ADCSAMPLERATE/displaysubsample)),(SETUP_pAoffset*1e9+displaybuffer(10:(displaybuffersize-10))./(mygain*-1e-9)),['-' colors(sampleshift)],'MarkerSize',5);
                     plot(((10:(displaybuffersize-10))/(ADCSAMPLERATE/displaysubsample)),(SETUP_pAoffset*1e9+displaybuffer(10:(displaybuffersize-10))./(mygain*-1e-9)),'-','Color',lightblue,'MarkerSize',5);
                     hold on;
                     displaycount = 1+mod(displaycount+1,4);
@@ -282,6 +294,51 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                 end
                 
                 
+                %----------------------------------------------------------------------------------------------------------------------------------------------
+                
+                readbytes_fifo = readfromblockpipeout(handles.xem, PIPEOUT_FSM_CURRENT_STATE, ADC_xfer_blocksize, ADC_xfer_blocksize);
+                
+                bytesread_fifo = length(readbytes_fifo);
+                readvalues_fifo = typecast(readbytes_fifo,RAWDATAFORMAT);
+
+                readvalues_fifo = cast(readvalues_fifo,'uint16');
+                set(handles.text_FSM,'String',sprintf('Data in FIFO: %g \n' ,readvalues_fifo));
+                
+                
+                if readvalues_fifo>0
+                    manualbuttonenable = 'off';
+                else
+                    manualbuttonenable = 'on';
+                end
+                
+                %{
+                set(handles.pushbutton_bias1000,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias500,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias400,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias300,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias200,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias100,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias50,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias1000,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias500,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias400,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias300,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias200,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias100,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias50,'Enable',manualbuttonenable);
+                set(handles.pushbutton_zeroDACs,'Enable',manualbuttonenable);
+                set(handles.pushbutton_invert,'Enable',manualbuttonenable);
+                set(handles.pushbutton_prevbias,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias_inc100,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias_inc10,'Enable',manualbuttonenable);
+                set(handles.pushbutton_bias_inc1,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias_inc100,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias_inc10,'Enable',manualbuttonenable);
+                set(handles.pushbutton_nbias_inc1,'Enable',manualbuttonenable);
+                %}
+                
+%----------------------------------------------------------------------------------------------------------------------------------------------                
+ 
                 myRdc = biasvoltage / myIdc * 1e-6;
                 myGdc = myIdc / biasvoltage * 1e9;
                 set(handles.text_Idc1,'String',sprintf('Idc ~= %1.3f nA \nIrms ~= %1.1f pA \nR ~= %4.1f Mohm \nG ~= %4.1f nS',myIdc*1e9,myIrms*1e12,myRdc,myGdc ));            
@@ -317,6 +374,20 @@ function returnval = DAQ_process_triggers(obj, event, handles)
 
                 if ~isempty(triggerindex)
                     previewcenter = displaybuffertime*((triggerindex-previewindexstart)/(previewindexend-previewindexstart));
+                
+                    %disp('hello i am making a line');
+                    
+                    plot([0 0],[display_ymin*1e9 display_ymax*1e9],'r-','LineWidth',2); % 4321:
+                    
+                    %{
+                    % highlight several triggers
+                    firsttriggers = find(triggervalues>0,4);
+                    firsttriggerlocations = displaybuffertime*((firsttriggers-triggerindex-previewindexstart)/(previewindexend-previewindexstart));
+                    for k = 1:length(firsttriggers)
+                        plot(firsttriggerlocations(k)*[1 1],[display_ymin*1e9 display_ymax*1e9],'r-','LineWidth',2);
+                    end
+                    %}                
+                    
                 end
 
                 previewstart = previewcenter - 0.5*PREVIEWtime;
@@ -368,7 +439,7 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                         DAQ_updateDAC(handles);
 
                         t = timer('StartDelay',zapseconds);
-                        t.TimerFcn = {@DAQ_updateDAC, handles, getbiasmV};
+                        t.TimerFcn = {@DAQ_updateDAC_timed, handles, getbiasmV};
                         start(t);
                     end
                 end
