@@ -42,8 +42,15 @@ function returnval = DAQ_process_triggers(obj, event, handles)
             %printRawADCdata=dec2bin(typecast(readvalues(1:16),'uint16'),16)
             
             readvalues = typecast(readbytes,RAWDATAFORMAT);
-            readvalues = cast(readvalues,'uint16');
             
+            % 4321:
+            % ================
+            % TESTING
+            ADCvalues = bitand(readvalues,bin2dec('00000000000000001111111111111111'));    %note: also saves trigger signals
+            DACvalues = cast(bitshift(bitand(readvalues,bin2dec('11111111111111110000000000000000')),-16),'uint16');
+            % ================
+            
+            readvalues = cast(ADCvalues,'uint16');
             read_monitor = read_monitor + 2*length(readvalues);
             
             %printRawADCdata=dec2bin(readvalues(1:16),16)
@@ -80,6 +87,7 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                     %logADCfid
                     if(logADCfid>0)
                         fclose(logADCfid);
+                        fclose(logDACfid); % 4321:
                     end
                     ADClogsize=0;
                     %mysamplerate = sprintf('_%dksps',ADCSAMPLERATE/1000);
@@ -87,9 +95,17 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                     
                     mytimestampstring = datestr(mytimestamp,'_yyyymmdd_HHMMSS');
                     
+
+
                     mylogdir = ['logfiles\' get(handles.edit_logdir,'String')];
-                    logfilename = [mylogdir '\' get(handles.edit_logname,'String') mytimestampstring];
-                    fprintf('log file: %s\n',logfilename);
+                    ADClogfilename = [mylogdir '\' get(handles.edit_logname,'String') mytimestampstring];
+                    DAClogfilename = [mylogdir '\' get(handles.edit_logname,'String') '_DAC' mytimestampstring];
+                    fprintf('log file: %s\n',ADClogfilename);
+                    
+ %            1234:         
+%                     mylogdir = ['logfiles\' get(handles.edit_logdir,'String')];
+%                     logfilename = [mylogdir '\' get(handles.edit_logname,'String') mytimestampstring];
+%                     fprintf('log file: %s\n',logfilename);
 
                     SETUP_TIAgain = str2double(get(handles.edit_gain_Mohm,'String'))*1e6;
                     SETUP_preADCgain = str2double(get(handles.edit_preADCgain,'String'));

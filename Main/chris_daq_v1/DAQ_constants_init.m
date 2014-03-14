@@ -35,6 +35,7 @@ show_debug_report = 0;
 % show_debug_report = 3; % scanvector plots
 % show_debug_report = 4; % displayed initialized constants
 % show_debug_report = 5; % display auto voltage zero 
+% show_debug_report = 6; % display dac instructions
 
 toggle_DAC_to_DOT = 0;
 toggle_DPOT_to_DAC = 0;
