@@ -66,7 +66,11 @@ for c = 1:length(myCommandTypes)
     elseif (myCommand(c) == 2);
         % Trigger
         n_edgedetector=128;
-        Data_DAC1(c) = Data_DAC1(c)*1e-9 * TIAgain * preADCgain / (2*ADCVREF * 2^-ADCBITS) * n_edgedetector / 2; 
+        TIAgain
+        preADCgain
+        
+        Data_DAC1(c) = Data_DAC1(c);
+%         *1e-9 * TIAgain * preADCgain / (2*ADCVREF * 2^-ADCBITS) * n_edgedetector / 2; 
         
     end
 
@@ -80,7 +84,7 @@ temp = myInstructions;
 myInstructions(1:2:end,:) = temp(1:1:L2,:);
 myInstructions(2:2:end,:) = temp(L2+1:1:end,:);
 
-DAQ_sendDACFSMvector1(handles.xem, myInstructions);
+DAQ_sendFSMvector(handles.xem, myInstructions);
 
 
 

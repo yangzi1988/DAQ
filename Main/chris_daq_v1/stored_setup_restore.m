@@ -25,7 +25,9 @@ if show_debug_report == -1 || show_debug_report == 4
 end
 
 R_f_preamp = str2double(get(handles.edit_gain_Mohm,'String'))*1e6;
+TIAgain = R_f_preamp;
 fc1_preamp = 1/(2*pi*R_f_preamp*C_f_preamp);
+preADCgain = str2double(get(handles.edit_preADCgain,'String'));
 
 set(handles.enable_debug_level,'String', show_debug_report);
 
