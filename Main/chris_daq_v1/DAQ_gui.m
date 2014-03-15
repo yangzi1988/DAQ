@@ -22,7 +22,7 @@ function varargout = DAQ_gui(varargin)
 
 % Edit the above text to modify the response to help DAQ_gui
 
-% Last Modified by GUIDE v2.5 14-Mar-2014 18:06:31
+% Last Modified by GUIDE v2.5 14-Mar-2014 20:23:50
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -1669,13 +1669,13 @@ function text_adcfifolevel_CreateFcn(hObject, eventdata, handles)
 % handles    empty - handles not created until after all CreateFcns called
 
 
-% --- Executes on button press in checkbox29.
-function checkbox29_Callback(hObject, eventdata, handles)
-% hObject    handle to checkbox29 (see GCBO)
+% --- Executes on button press in save_DAC_log.
+function save_DAC_log_Callback(hObject, eventdata, handles)
+% hObject    handle to save_DAC_log (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hint: get(hObject,'Value') returns toggle state of checkbox29
+% Hint: get(hObject,'Value') returns toggle state of save_DAC_log
 
 
 
@@ -2085,3 +2085,85 @@ function edit52_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in send_script.
+function send_script_Callback(hObject, eventdata, handles)
+% hObject    handle to send_script (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+name = get(handles.script_filename,'String');
+DAQ_updateDAC_script(handles,name);
+
+
+function script_filename_Callback(hObject, eventdata, handles)
+% hObject    handle to script_filename (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of script_filename as text
+%        str2double(get(hObject,'String')) returns contents of script_filename as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function script_filename_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to script_filename (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in browse_script.
+function browse_script_Callback(hObject, eventdata, handles)
+% hObject    handle to browse_script (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+[filename, pathname, filterindex] = uigetfile('*.csv', 'Pick a scan vector file');
+if pathname ~= 0
+    set(handles.script_filename,'String',filename);
+end
+
+
+% --- Executes on button press in pushbutton_DACfiforeset.
+function pushbutton_DACfiforeset_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton_DACfiforeset (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+DAQ_constants_include;
+activatetriggerin(handles.xem, EP_TRIGGERIN_DACFSM, EPBIT_DACFSM_RESETFIFO); 
+
+
+% --- Executes on button press in pushbutton_forcetrigger.
+function pushbutton_forcetrigger_Callback(hObject, eventdata, handles)
+% hObject    handle to pushbutton_forcetrigger (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+DAQ_constants_include;
+activatetriggerin(handles.xem, EP_TRIGGERIN_DACFSM, EPBIT_DACFSM_FORCETRIGGER);  
+
+
+% --- Executes on button press in enable_trigger_detector.
+function enable_trigger_detector_Callback(hObject, eventdata, handles)
+% hObject    handle to enable_trigger_detector (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of enable_trigger_detector
+DAQ_constants_include;
+value = get(hObject,'Value');
+%setwireinvalue(handles.xem,EP_WIREIN_TEST1, ledvalue*EPBIT_LED0, EPBIT_LED0 );    
+setwireinvalue(handles.xem,EP_WIREIN_TEST1, value, hex2dec('0001')); 
+updatewireins(handles.xem);
+
+
+
+
+
+
+
+

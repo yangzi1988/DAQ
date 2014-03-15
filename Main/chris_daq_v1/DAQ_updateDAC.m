@@ -139,7 +139,7 @@ DACcurrent = DAC1voltage;
 % DAQ_sendscanvector(handles.xem, myscanvector);
 
 myCommand=3;
-myInstructions = uint32( [ (uint32(DAC2code).*2^0) ; (uint32(DAC1code).*2^8 + uint32(myCommand).*2^0)])
+myInstructions = uint32( [ (uint32(DAC2code).*2^0) ; (uint32(DAC1code).*2^8 + uint32(myCommand).*2^0)]);
 DAQ_sendFSMvector(handles.xem, myInstructions);
 
 

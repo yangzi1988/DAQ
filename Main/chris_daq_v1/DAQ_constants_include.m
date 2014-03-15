@@ -176,7 +176,7 @@ global EPBIT_ADC1MUX0 EPBIT_ADC1MUX1
 global EPBIT_HEADSTAGE_PWR_EN EPBIT_HEADSTAGE_PWR_LED
 
 global EP_ACTIVELOWBITS
-
+global EPBIT_DACFSM_RESETFIFO EPBIT_DACFSM_FORCETRIGGER
 % ================================================
 % SCAN CHAIN DATA LOCATIONS
 % ================================================

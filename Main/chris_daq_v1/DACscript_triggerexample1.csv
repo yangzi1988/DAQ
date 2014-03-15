@@ -1,0 +1,7 @@
+Command Types,Data,Trigger Type (If Trigger)
+TRIG,10,RISE
+BIAS,100,
+DELAY,1000,
+BIAS,300,
+TRIG,100,RISE
+BIAS,500,
