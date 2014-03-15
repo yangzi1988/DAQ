@@ -45,7 +45,7 @@ global R1_Cslow R2_Cslow CSLOW_gain CSLOW_CAP0 CSLOW_CAP CAP_Rseries_x_Cslow
 
 global Rseries Ts_est degree_comp_Rseries degree_comp_Supercharge
 
-global preADCgain
+global preADCgain TIAgain
 
 % ================================================
 % CIRCUIT CONTROL DEFAULTS

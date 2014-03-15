@@ -90,7 +90,8 @@ samplerate = samplerate / subsample;
     
     clear readvalues;
     
-    triggermask = 2^0
+%     triggermask = 2^0 % 1234:
+    triggermask = 2^0 + 2^1;
     triggervalues = boolean(bitand(rawvalues,triggermask));
     
     %logdata = resample(logdata,1,subsample);
@@ -220,10 +221,10 @@ samplerate = samplerate / subsample;
         % =======================================================
         % =======================================================
 
-        max_points_to_plot = 4e6;
+        max_points_to_plot = 8e6;
         %timeplotoffset = 3; %sec
 
-        targetsamplerate1 = 500e3;
+        targetsamplerate1 = 1e6;
         resampleratio1 = floor(samplerate/targetsamplerate1);
         outputsamplerate1 = samplerate / resampleratio1
 
@@ -312,8 +313,13 @@ samplerate = samplerate / subsample;
         plot((1:length(resampleddata2))/samplerate * resampleratio2*1e3,resampleddata2.*1e9,'-r');
         %plot(t,originaldata.*1e9,['-' colors(m+1)]);
 
-        plot((1:length(resampleddata1))/samplerate*1e3,triggervalues(1:length(resampleddata1)),'.k');
+%         1234:
+%         plot((1:length(resampleddata1))/samplerate*1e3,triggervalues(1:length(resampleddata1)),'.k');
         
+        triggerindexes = find(triggervalues>0)
+        plot(triggerindexes./samplerate*1e3,zeros(size(triggerindexes)),'r^','MarkerSize',10)
+
+
         %==========================
         %{
         figure;

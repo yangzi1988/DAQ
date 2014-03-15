@@ -529,7 +529,9 @@ function edit_gain_Mohm_Callback(hObject, eventdata, handles)
 DAQ_constants_include;
 
 R_f_preamp = str2double(get(handles.edit_gain_Mohm,'String'))*1e6;
+TIAgain = R_f_preamp;
 fc1_preamp = 1/(2*pi*R_f_preamp*C_f_preamp);
+
 
 
 % Hints: get(hObject,'String') returns contents of edit_gain_Mohm as text
@@ -1589,17 +1591,19 @@ function pushbutton_zap_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-getbiasmV = str2double(get(handles.text_biasvoltage,'String'));
-zapbiasmV = str2double(get(handles.edit_zapmV,'String'));
-zapseconds = str2double(get(handles.edit_zapseconds,'String'));
+% 1234:
+% getbiasmV = str2double(get(handles.text_biasvoltage,'String'));
+% zapbiasmV = str2double(get(handles.edit_zapmV,'String'));
+% zapseconds = str2double(get(handles.edit_zapseconds,'String'));
+% 
+% set(handles.text_biasvoltage,'String',zapbiasmV);
+% DAQ_updateDAC(handles);
+% 
+% t = timer('StartDelay',zapseconds);
+% t.TimerFcn = {@DAQ_auto_zap, handles, getbiasmV};
+% start(t);
 
-set(handles.text_biasvoltage,'String',zapbiasmV);
-DAQ_updateDAC(handles);
-
-t = timer('StartDelay',zapseconds);
-t.TimerFcn = {@DAQ_unclogDAC, handles, getbiasmV};
-start(t);
- 
+ DAQ_manual_zap(handles)
         
         
 

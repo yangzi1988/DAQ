@@ -1,5 +1,5 @@
 
-function returnval = DAQ_updateDAC_timed(obj, event, handles, newbiasvalue)
+function returnval = DAQ_auto_zap(obj, event, handles, newbiasvalue)
 
 DAQ_constants_include;
 

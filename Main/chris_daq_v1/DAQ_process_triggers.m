@@ -439,7 +439,7 @@ function returnval = DAQ_process_triggers(obj, event, handles)
                         DAQ_updateDAC(handles);
 
                         t = timer('StartDelay',zapseconds);
-                        t.TimerFcn = {@DAQ_updateDAC_timed, handles, getbiasmV};
+                        t.TimerFcn = {@DAQ_auto_zap, handles, getbiasmV};
                         start(t);
                     end
                 end
